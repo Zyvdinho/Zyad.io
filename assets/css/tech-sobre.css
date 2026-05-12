@@ -86,25 +86,107 @@ a:hover { color: var(--c-accent); }
    HERO
    ============================================ */
 #hero {
-  background: linear-gradient(135deg, #0a0e27 0%, #131a3d 45%, #1a2856 100%) !important;
-  position: relative;
-  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(0, 217, 255, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(99, 102, 241, 0.18) 0%, transparent 50%),
+    linear-gradient(135deg, #050818 0%, #0a0e27 45%, #131a3d 100%) !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 #hero::before {
-  background: radial-gradient(circle at 30% 50%, rgba(0, 217, 255, 0.12), transparent 60%) !important;
-  background-attachment: fixed;
+  background: transparent !important;
+  display: none;
 }
-/* Grille tech en surimpression */
+/* Grille tech en surimpression — derrière les particules */
 #hero::after {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 217, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 217, 255, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(0, 217, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 217, 255, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
   z-index: 1;
   pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* Canvas des particules */
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Orbes lumineux flottants */
+.hero-orbs {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.45;
+  will-change: transform;
+}
+.orb-1 {
+  width: 480px;
+  height: 480px;
+  background: #00d9ff;
+  top: -10%;
+  left: -5%;
+  animation: orbFloat1 22s ease-in-out infinite;
+}
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: #6366f1;
+  top: 40%;
+  right: -8%;
+  animation: orbFloat2 26s ease-in-out infinite;
+}
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: #00a8c2;
+  bottom: -10%;
+  left: 35%;
+  animation: orbFloat3 28s ease-in-out infinite;
+}
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(120px, 80px) scale(1.15); }
+  66% { transform: translate(-60px, 140px) scale(0.9); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, -120px) scale(1.2); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(80px, -100px) scale(1.1); }
+  70% { transform: translate(-140px, -60px) scale(0.85); }
+}
+
+/* Container au-dessus de tout */
+#hero .hero-container {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* Sur mobile : désactive le canvas et réduit les orbes pour les perfs */
+@media (max-width: 768px) {
+  #hero-canvas { display: none; }
+  .orb { filter: blur(60px); opacity: 0.35; }
+  .orb-1 { width: 280px; height: 280px; }
+  .orb-2 { width: 240px; height: 240px; }
+  .orb-3 { width: 220px; height: 220px; }
 }
 #hero h1 {
   font-size: 84px !important;
