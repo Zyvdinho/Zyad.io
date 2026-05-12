@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Projets — Zyad MOUTAOUAKIL</title>
+    <meta
+      content="Projets BTS SIO SISR — Zyad MOUTAOUAKIL"
+      name="description"
+    />
+    <meta
+      content="BTS SIO, SISR, AD, DHCP, DNS, STP, TCP UDP, Zabbix"
+      name="keywords"
+    />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <style>
+      .projet-card {
+        background: #fff;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .projet-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+      }
+      .projet-card .card-image {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: #f5f7fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .projet-card .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .projet-card .card-body {
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .projet-card h3 {
+        color: #173b6c;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        line-height: 1.35;
+      }
+      .projet-card .productions {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.55;
+        flex-grow: 1;
+        margin-bottom: 18px;
+      }
+      .projet-card .productions strong {
+        color: #173b6c;
+      }
+      .btn-pdf {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 18px;
+        background: #149ddd;
+        color: #fff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        align-self: flex-start;
+      }
+      .btn-pdf:hover {
+        background: #0d8bc7;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(20, 157, 221, 0.35);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <!-- ======= Header (sidebar) ======= -->
+    <header id="header">
+      <div class="d-flex flex-column">
+        <div class="profile">
+          <img
+            src="assets/img/zyad-PFP.jpg"
+            alt="Zyad MOUTAOUAKIL"
+            class="img-fluid rounded-circle"
+          />
+          <h1 class="text-light"><a href="index.html">Zyad MOUTAOUAKIL</a></h1>
+          <div class="social-links mt-3 text-center">
+            <a
+              href="https://www.linkedin.com/in/zyad-it"
+              class="linkedin"
+              target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="https://github.com/Zyvdinho" class="github" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+          </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="index.html#hero" class="nav-link scrollto"
+                ><i class="bx bx-home"></i> <span>Accueil</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#about" class="nav-link scrollto"
+                ><i class="bx bx-user"></i> <span>À propos</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#resume" class="nav-link scrollto"
+                ><i class="bx bx-file-blank"></i> <span>Mon CV</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link scrollto active"
+                ><i class="bx bx-book-content"></i> <span>Projets</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#services" class="nav-link scrollto"
+                ><i class="bx bx-server"></i>
+                <span>Veille Technologique</span></a
+              >
+            </li>
+            <li>
+              <a href="index.html#contact" class="nav-link scrollto"
+                ><i class="bx bx-envelope"></i> <span>Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>Projets</h2>
+            <ol>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html#portfolio">Projets</a></li>
+              <li>Tous les projets</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+
+      <!-- ======= Projets Section ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="section-title mb-4">
+            <h2 style="color: #093777">Mes projets BTS SIO SISR</h2>
+            <p>
+              Ensemble des projets réalisés dans le cadre de ma formation au
+              Lycée Jean Mermoz Montpellier. Chaque projet est documenté par un
+              dossier PDF téléchargeable.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Projet 1 : TCP / UDP -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up">
+              <div class="projet-card">
+                <div class="card-image">
+                  <img
+                    src="assets/img/wireshark.jpg"
+                    alt="TP TCP/UDP Wireshark"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>
+                    Projet — Analyse des protocoles TCP/UDP avec Wireshark
+                  </h3>
+                  <p class="productions">
+                    <strong>Productions :</strong> Captures Wireshark,
+                    identification des en-têtes, comparaison fiabilité —
+                    <em>TP TCP/UDP.pdf</em>
+                  </p>
+                  <a href="TP_TCP_UDP.pdf" target="_blank" class="btn-pdf">
+                    <i class="fas fa-file-pdf"></i> Télécharger le TP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projet 2 : DHCP -->
+            <div
+              class="col-lg-6 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="projet-card">
+                <div class="card-image">
+                  <img
+                    src="assets/img/scolaire/routeur.jpg"
+                    alt="TP DHCP Windows Server"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>
+                    Projet — Configuration d'un serveur DHCP (Windows Server)
+                  </h3>
+                  <p class="productions">
+                    <strong>Productions :</strong> Étendues, réservations,
+                    relais DHCP, tests de déploiement — <em>TP_DHCP.pdf</em>
+                  </p>
+                  <a href="TP_DHCP.pdf" target="_blank" class="btn-pdf">
+                    <i class="fas fa-file-pdf"></i> Télécharger le TP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projet 3 : DNS -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up">
+              <div class="projet-card">
+                <div class="card-image">
+                  <img
+                    src="assets/img/reseau-informatique-w3pr4.jpeg"
+                    alt="TP DNS"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>
+                    Projet — Mise en place d'un serveur DNS et résolution de
+                    noms
+                  </h3>
+                  <p class="productions">
+                    <strong>Productions :</strong> Zones directes/inverses,
+                    forwarders, tests d'acceptation — <em>TP_DNS.pdf</em>
+                  </p>
+                  <a href="TP_DNS.pdf" target="_blank" class="btn-pdf">
+                    <i class="fas fa-file-pdf"></i> Télécharger le TP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projet 4 : Spanning Tree -->
+            <div
+              class="col-lg-6 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="projet-card">
+                <div class="card-image">
+                  <img
+                    src="assets/img/Capture_cisco1.PNG"
+                    alt="TP Spanning Tree Protocol"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>
+                    Projet — Spanning Tree Protocol (STP) : continuité de
+                    service réseau
+                  </h3>
+                  <p class="productions">
+                    <strong>Productions :</strong> Élection root bridge,
+                    prévention boucles, redondance switches —
+                    <em>TP_SpanningTree.pdf</em>
+                  </p>
+                  <a href="TP_SpanningTree.pdf" target="_blank" class="btn-pdf">
+                    <i class="fas fa-file-pdf"></i> Télécharger le TP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projet 5 : Active Directory -->
+            <div class="col-lg-6 col-md-6" data-aos="fade-up">
+              <div class="projet-card">
+                <div class="card-image">
+                  <img
+                    src="assets/img/scolaire/capturead.png"
+                    alt="TP Active Directory HA & LB"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>
+                    Projet — Active Directory : Haute Disponibilité, Load
+                    Balancing &amp; GPO
+                  </h3>
+                  <p class="productions">
+                    <strong>Productions :</strong> Cluster DC redondants, plan
+                    de continuité, niveaux d'habilitation, GPO, tests
+                    d'intégration — <em>TP_AD_HA_LB.pdf</em>
+                  </p>
+                  <a href="TP_AD_HA_LB.pdf" target="_blank" class="btn-pdf">
+                    <i class="fas fa-file-pdf"></i> Télécharger le TP
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Projet 6 : Zabbix -->
+            <div
+              class="col-lg-6 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="projet-card">
+                <div class="card-image">
+                  <img
+                    src="assets/img/portfolio/zabbix.png"
+                    alt="TP Zabbix Supervision"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3>
+                    Projet — Zabbix : Supervision système, réseau et gestion
+                    d'incidents
+                  </h3>
+                  <p class="productions">
+                    <strong>Productions :</strong> Serveur Zabbix, agents,
+                    dashboards, alertes mail, recensement des actifs supervisés
+                    — <em>TP_Zabbix_FINAL.pdf</em>
+                  </p>
+                  <a
+                    href="TP_Zabbix_FINAL.pdf"
+                    target="_blank"
+                    class="btn-pdf"
+                  >
+                    <i class="fas fa-file-pdf"></i> Télécharger le TP
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Retour -->
+          <div class="mt-5 text-center">
+            <a href="index.html#portfolio" class="cyber-btn">
+              <i class="fas fa-arrow-left"></i> Retour à l'accueil
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- End Projets Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; 2026 <strong><span>Zyad MOUTAOUAKIL</span></strong>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+    >
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

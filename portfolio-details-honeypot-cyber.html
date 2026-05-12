@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Honeypot - Définition et Principes</title>
+  <meta content="Définition complète d'un honeypot, système de leurre en cybersécurité pour détection et analyse des attaques" name="description">
+  <meta content="honeypot, cybersécurité, détection d'intrusion, système leurre, BTS SIO SISR" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- CSS spécifique pour honeypot -->
+  <link href="assets/css/honeypot-style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/zyad-PFP.jpg" alt="Zyad MOUTAOUAKIL" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Zyad MOUTAOUAKIL</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.linkedin.com/in/zyad-it" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/Zyvdinho" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="index.html#hero" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Accueil</span></a></li>
+          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>À propos</span></a></li>
+          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Mon CV</span></a></li>
+          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projets</span></a></li>
+          <li><a href="index.html#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Veille technologique</span></a></li>
+          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Honeypot : Définition et Principes</h2>
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#services">Veille technologique</a></li>
+            <li>Définition</li>
+          </ol>
+        </div>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/Definition_henoypot.png" alt="Principe de fonctionnement d'un honeypot">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/honeypot-arch.jpg" alt="Architecture d'un système honeypot">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="honeypot-content mt-4">
+              <h3>Définition du honeypot</h3>
+              
+              <p>Un <strong>honeypot</strong> (pot de miel en français) est un <strong>système informatique leurre</strong> spécialement conçu pour <strong>attirer, détecter et analyser</strong> les tentatives d'intrusion et les cyberattaques. Il s'agit d'un <strong>outil proactif de sécurité</strong> qui simule des vulnérabilités ou des services sensibles afin d'étudier les techniques des attaquants.</p>
+              
+              <h4 class="mt-4">Principes fondamentaux</h4>
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <div class="honeypot-info-box">
+                    <h5><i class="bi bi-shield-exclamation"></i> Attraction contrôlée</h5>
+                    <p>Le honeypot présente des services vulnérables (SSH, FTP, HTTP, SMB) mais n'expose aucune donnée réelle de l'entreprise.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="honeypot-info-box">
+                    <h5><i class="bi bi-eye"></i> Surveillance totale</h5>
+                    <p>Toutes les interactions avec le système sont enregistrées, analysées et tracées pour comprendre les méthodes d'attaque.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <div class="honeypot-info-box">
+                    <h5><i class="bi bi-box-arrow-in-right"></i> Isolation sécurisée</h5>
+                    <p>Le système est isolé du réseau de production pour éviter toute contamination ou propagation d'attaques.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="honeypot-info-box">
+                    <h5><i class="bi bi-graph-up-arrow"></i> Analyse et apprentissage</h5>
+                    <p>Les données collectées servent à améliorer les systèmes de détection et à anticiper les futures attaques.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="honeypot-alert info mt-4">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info honeypot-info">
+              <h3>Fiche technique</h3>
+              <ul>
+                <li><strong>Catégorie</strong> : Cybersécurité défensive</li>
+                <li><strong>Niveau</strong> : Outil de détection avancé</li>
+                <li><strong>Complexité</strong> : Moyenne à élevée</li>
+                <li><strong>Veille</strong> : Janvier 2024</li>
+              </ul>
+            </div>
+            
+            <div class="portfolio-info mt-4">
+              <h4>Source principale</h4>
+              <div class="source-link">
+                
+                <div>
+                  <i class="bi bi-shield-check"></i>
+                  <strong>ANSSI - Guide honeypots</strong><br>
+                  <a href="https://www.ssi.gouv.fr/guide/guide-dutilisation-des-honeypots/" target="_blank" class="d-block mt-1">
+                    Consulter le guide <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+          
+          </div>
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2026 <strong><span>Zyad MOUTAOUAKIL</span></strong>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>

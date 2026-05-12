@@ -1,0 +1,542 @@
+/* --------------------------------------------------------------
+# Honeypot Theme
+# Styles spécifiques pour la veille technologique honeypot
+-------------------------------------------------------------- */
+
+:root {
+    --honey-color: #ff9500;
+    --honey-dark: #cc7700;
+    --honey-light: #ffbf66;
+    --cyber-dark: #0a1929;
+    --cyber-blue: #1a75ff;
+    --cyber-gradient: linear-gradient(135deg, #ff9500 0%, #1a75ff 100%);
+    --success-color: #28a745;
+    --info-color: #17a2b8;
+  }
+  
+  /* Cartes honeypot */
+  .honeypot-card {
+    border: 2px solid var(--honey-light);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: linear-gradient(145deg, #ffffff 0%, #fff9f0 100%);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .honeypot-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 149, 0, 0.25);
+    border-color: var(--honey-color);
+  }
+  
+  .card-icon {
+    background: var(--cyber-gradient);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: -30px auto 20px auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(255, 149, 0, 0.3);
+  }
+  
+  .honeypot-card .card-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .honeypot-card .card-title {
+    color: var(--cyber-dark);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    text-align: center;
+    min-height: 3rem;
+  }
+  
+  .honeypot-card .card-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .card-footer {
+    padding: 1rem 1.5rem 1.5rem;
+    background: transparent;
+    border-top: none;
+    margin-top: auto;
+  }
+  
+  /* Boutons honeypot */
+  .honeypot-btn {
+    background: var(--cyber-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .honeypot-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+  }
+  
+  .honeypot-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 149, 0, 0.3);
+    color: white;
+  }
+  
+  .honeypot-btn:hover::before {
+    left: 100%;
+  }
+  
+  .honeypot-btn:active {
+    transform: translateY(-1px);
+  }
+  
+  /* Section veille technologique */
+  #services.section-bg {
+    background: linear-gradient(135deg, #f8f9fa 0%, #f0f7ff 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #services.section-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 149, 0, 0.1) 0%, transparent 70%);
+    z-index: 0;
+  }
+  
+  #services .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #services .section-title h2 {
+    color: var(--cyber-dark);
+    position: relative;
+    display: inline-block;
+  }
+  
+  #services .section-title h2::after {
+    background: var(--cyber-gradient);
+    height: 4px;
+    width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #services .section-title p {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Boîte d'information */
+  .honeypot-info-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    border-left: 5px solid var(--honey-color);
+  }
+  
+  .honeypot-info-box h4 {
+    color: var(--cyber-dark);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .honeypot-info-box p {
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /* Styles pour les pages de détails honeypot */
+  .honeypot-content {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .honeypot-content h3 {
+    color: var(--cyber-dark);
+    border-bottom: 3px solid var(--honey-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .honeypot-content h4 {
+    color: var(--cyber-dark);
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .honeypot-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .honeypot-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .honeypot-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: var(--honey-color);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .honeypot-info {
+    background: linear-gradient(135deg, #fff9f0 0%, #f0f7ff 100%);
+    border-radius: 12px;
+    border: 2px solid var(--honey-light);
+  }
+  
+  .honeypot-info h3 {
+    color: var(--cyber-dark);
+    border-bottom: 2px solid var(--honey-color);
+    padding-bottom: 10px;
+  }
+  
+  .source-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--honey-color);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--cyber-dark);
+  }
+  
+  .source-link:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+    color: var(--honey-dark);
+    text-decoration: none;
+  }
+  
+  .source-link i {
+    color: var(--honey-color);
+  }
+  
+  /* Badges pour les pages de détails */
+  .honeypot-badge {
+    background: var(--cyber-gradient);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  /* Tableau de comparaison */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .comparison-table th {
+    background: var(--cyber-gradient);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .comparison-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .comparison-table tr:nth-child(even) {
+    background: #f8f9fa;
+  }
+  
+  .comparison-table tr:hover {
+    background: #e9ecef;
+  }
+  
+  /* Alertes stylisées */
+  .honeypot-alert {
+    border-left: 5px solid var(--honey-color);
+    background: #fff9f0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .honeypot-alert.info {
+    border-left-color: var(--info-color);
+    background: #f0f7ff;
+  }
+  
+  .honeypot-alert.success {
+    border-left-color: var(--success-color);
+    background: #f0fff4;
+  }
+  
+  .honeypot-alert h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cyber-dark);
+    margin-bottom: 10px;
+  }
+  
+  /* Timeline pour l'évolution */
+  .honeypot-timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 30px 0;
+  }
+  
+  .honeypot-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--cyber-gradient);
+  }
+  
+  .honeypot-timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 20px;
+  }
+  
+  .honeypot-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--honey-color);
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--honey-light);
+  }
+  
+  .honeypot-timeline-item h5 {
+    color: var(--cyber-dark);
+    margin-bottom: 5px;
+  }
+  
+  .honeypot-timeline-item p {
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .honeypot-card {
+      margin-bottom: 30px;
+    }
+    
+    .honeypot-card .card-body {
+      padding: 0 1rem 1rem;
+    }
+    
+    .card-icon {
+      margin: -25px auto 15px auto;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+    
+    .honeypot-info-box {
+      padding: 15px;
+    }
+    
+    .honeypot-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .honeypot-card {
+      max-width: 100%;
+    }
+  }
+
+  /* Image de présentation */
+.honeypot-presentation {
+    margin-bottom: 40px;
+  }
+  
+  .honeypot-presentation img {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid var(--honey-light);
+  }
+  
+  .presentation-caption {
+    color: var(--cyber-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  /* Conteneur d'image pour les cartes */
+  .card-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .honeypot-card:hover .card-image {
+    transform: scale(1.1);
+  }
+  
+  .card-icon-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 149, 0, 0.9);
+    color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+  }
+  
+  .honeypot-card:hover .card-icon-overlay {
+    background: rgba(26, 117, 255, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
+  /* Image pour la méthodologie */
+  .honeypot-info-box img {
+    border: 3px solid var(--honey-color);
+    box-shadow: 0 5px 15px rgba(255, 149, 0, 0.2);
+  }
+  
+  /* Styles responsifs pour les images */
+  @media (max-width: 768px) {
+    .honeypot-presentation img {
+      max-height: 250px;
+    }
+    
+    .card-image-container {
+      height: 180px;
+    }
+    
+    .card-icon-overlay {
+      width: 60px;
+      height: 60px;
+      font-size: 25px;
+    }
+    
+    .honeypot-info-box .col-lg-3 {
+      margin-bottom: 20px;
+    }
+    
+    .honeypot-info-box img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .honeypot-presentation img {
+      max-height: 200px;
+    }
+    
+    .card-image-container {
+      height: 150px;
+    }
+    
+    .card-icon-overlay {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+
+  

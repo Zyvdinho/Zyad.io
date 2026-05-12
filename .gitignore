@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp Office (verrous d'édition Word/Excel)
+~$*
+
+# Editor
+.vscode/
+.idea/
+
+# Node (si jamais)
+node_modules/
